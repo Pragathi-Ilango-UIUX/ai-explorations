@@ -4,114 +4,252 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pragathi — AI Explorations</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    :root{
+      --bg: #f7f6f4;
+      --paper: #ffffff;
+      --ink: #111111;
+      --muted: #5d5d5d;
+      --rule: #d8d8d8;
+      --cardRule: #e6e6e6;
+      --max: 980px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ margin:0; padding:0; }
+    body{
+      background: var(--bg);
+      color: var(--ink);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+                   "Liberation Mono", "Courier New", monospace;
+      line-height: 1.55;
+    }
+
+    /* Page frame */
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px 18px 60px;
+    }
+
+    /* Top nav */
+    header{
+      display:flex;
+      justify-content:flex-end;
+      padding: 8px 0 18px;
+    }
+    nav a{
+      color: var(--ink);
+      text-decoration:none;
+      font-size: 13px;
+      margin-left: 18px;
+    }
+    nav a:hover{ text-decoration: underline; }
+
+    /* Hero */
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      padding: 8px 0 10px;
+    }
+    .hero h1{
+      font-size: 46px;
+      letter-spacing: -0.02em;
+      margin: 0;
+      font-weight: 500;
+    }
+    .hero p{
+      margin: 0;
+      color: var(--muted);
+      max-width: 70ch;
+      font-size: 14px;
+    }
+    .hero .boldline{
+      margin-top: 10px;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    hr{
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 20px 0;
+    }
+
+    /* Section title */
+    .section-title{
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin: 0 0 12px;
+    }
+
+    /* Cards grid (2 per row) */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card{
+      background: var(--paper);
+      border: 1px solid var(--cardRule);
+      padding: 14px;
+      text-decoration:none;
+      color: inherit;
+      display:block;
+    }
+
+    .thumb{
+      height: 180px;
+      border: 1px solid var(--cardRule);
+      background: linear-gradient(180deg, #fafafa, #f0f0f0);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color: #8a8a8a;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .meta h3{
+      margin: 0 0 6px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .meta p{
+      margin: 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .card:hover{
+      border-color: #cfcfcf;
+    }
+
+    /* Footer */
+    footer{
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--muted);
+      padding-top: 12px;
+    }
+
+    /* Responsive */
+    @media (max-width: 720px){
+      .hero h1{ font-size: 38px; }
+      .grid{ grid-template-columns: 1fr; }
+      header{ justify-content:flex-start; }
+      nav a{ margin-left: 0; margin-right: 16px; }
+    }
+  </style>
 </head>
 
 <body>
-  <header class="top">
-    <nav class="nav">
-      <a class="brand" href="#">PI.</a>
-      <div class="links">
-        <a href="#home">Home</a>
-        <a href="#work">Portfolio</a>
-        <a href="#play">Play</a>
-      </div>
-    </nav>
-  </header>
+  <div class="wrap">
+    <!-- Top nav -->
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <!-- Replace with your real portfolio link -->
+        <a href="PASTE_DESIGN_PORTFOLIO_LINK_HERE" target="_blank" rel="noreferrer">Design Portfolio</a>
+        <!-- Replace with your resume PDF link OR Google Drive link -->
+        <a href="PASTE_RESUME_LINK_HERE" target="_blank" rel="noreferrer">Resume</a>
+      </nav>
+    </header>
 
-  <main class="wrap">
-    <section id="home" class="hero">
-      <div class="hero-left">
-        <h1>Hi, I’m Pragathi.</h1>
-        <p class="sub">
-          I build small AI + interface experiments to practice prompting, interaction design,
-          and rapid prototyping.
-        </p>
-        <p class="meta">
-          Here are a few explorations—each one is a learning artifact, not a “perfect product.”
-        </p>
-      </div>
-
-      <div class="hero-right">
-        <div class="note">
-          <p><strong>Currently exploring:</strong></p>
-          <ul>
-            <li>Figma Make + prompting</li>
-            <li>Accessibility interfaces</li>
-            <li>Playful micro-interactions</li>
-          </ul>
-        </div>
+    <!-- Intro -->
+    <section class="hero">
+      <h1>Hi.</h1>
+      <p>
+        Welcome to my AI explorations — a small collection of experiments built to practice prompting,
+        interaction design, and rapid prototyping. Each project is a learning snapshot: what I tried,
+        what broke, and what I improved.
+      </p>
+      <div class="boldline">
+        Currently exploring: Figma Make · accessibility prototypes · playful UI systems
       </div>
     </section>
 
-    <hr class="rule" />
+    <hr />
 
-    <section id="work" class="section">
-      <h2>AI Explorations</h2>
+    <!-- AI Works -->
+    <section>
+      <h2 class="section-title">AI Works</h2>
 
       <div class="grid">
-        <!-- Card 1 -->
-        <a class="card" href="PASTE_YOUR_LINK_HERE" target="_blank" rel="noreferrer">
-          <img src="assets/asl-braille.png" alt="ASL to Braille prototype screenshot" />
-          <div class="card-body">
+        <!-- Project 1 -->
+        <a class="card" href="PASTE_PROJECT_LINK_1" target="_blank" rel="noreferrer">
+          <div class="thumb">Add screenshot: /assets/project-1.png</div>
+          <div class="meta">
             <h3>ASL → Braille Translator</h3>
-            <p>Accessibility prototype: live hand tracking → Braille + haptic simulation.</p>
-            <span class="tag">Figma Make</span>
+            <p>Live hand tracking to Braille output with a tactile/haptic-style simulation layer.</p>
           </div>
         </a>
 
-        <!-- Card 2 -->
-        <a class="card" href="PASTE_YOUR_LINK_HERE" target="_blank" rel="noreferrer">
-          <img src="assets/experiment-2.png" alt="Project screenshot" />
-          <div class="card-body">
-            <h3>Project Title</h3>
-            <p>One sentence on what you explored + what you learned.</p>
-            <span class="tag">Prompting</span>
+        <!-- Project 2 -->
+        <a class="card" href="PASTE_PROJECT_LINK_2" target="_blank" rel="noreferrer">
+          <div class="thumb">Add screenshot: /assets/project-2.png</div>
+          <div class="meta">
+            <h3>Project Title 2</h3>
+            <p>One-line description of what the experiment does and what you tested.</p>
           </div>
         </a>
 
-        <!-- Duplicate cards as needed -->
+        <!-- Project 3 -->
+        <a class="card" href="PASTE_PROJECT_LINK_3" target="_blank" rel="noreferrer">
+          <div class="thumb">Add screenshot: /assets/project-3.png</div>
+          <div class="meta">
+            <h3>Project Title 3</h3>
+            <p>One-line description (keep it short and specific).</p>
+          </div>
+        </a>
+
+        <!-- Project 4 -->
+        <a class="card" href="PASTE_PROJECT_LINK_4" target="_blank" rel="noreferrer">
+          <div class="thumb">Add screenshot: /assets/project-4.png</div>
+          <div class="meta">
+            <h3>Project Title 4</h3>
+            <p>One-line description (what’s the interaction / mechanic?).</p>
+          </div>
+        </a>
+
+        <!-- Project 5 -->
+        <a class="card" href="PASTE_PROJECT_LINK_5" target="_blank" rel="noreferrer">
+          <div class="thumb">Add screenshot: /assets/project-5.png</div>
+          <div class="meta">
+            <h3>Project Title 5</h3>
+            <p>One-line description of the AI behavior and UI outcome.</p>
+          </div>
+        </a>
+
+        <!-- Project 6 -->
+        <a class="card" href="PASTE_PROJECT_LINK_6" target="_blank" rel="noreferrer">
+          <div class="thumb">Add screenshot: /assets/project-6.png</div>
+          <div class="meta">
+            <h3>Project Title 6</h3>
+            <p>One-line description (what did you learn / explore?).</p>
+          </div>
+        </a>
       </div>
     </section>
 
-    <hr class="rule" />
+    <hr />
 
-    <section id="play" class="section">
-      <h2>Process</h2>
-      <p class="sub">
-        Each exploration includes: a prompt, iterations, what broke, what changed, and what I learned.
-      </p>
-
-      <div class="process">
-        <div class="box">
-          <h3>How I work</h3>
-          <ul>
-            <li>Start with a tiny scope</li>
-            <li>Prototype interactions first</li>
-            <li>Document failures + fixes</li>
-          </ul>
-        </div>
-
-        <div class="box">
-          <h3>What I’m practicing</h3>
-          <ul>
-            <li>Clear prompting</li>
-            <li>State-driven UI</li>
-            <li>Accessibility-first design</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <footer class="foot">
-      <p>© <span id="year"></span> Pragathi Ilango</p>
-      <p class="small">
-        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-        · <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-        · <a href="mailto:YOUR_EMAIL">Email</a>
-      </p>
+    <!-- Footer -->
+    <footer>
+      <div>© <span id="year"></span> Pragathi Ilango</div>
+      <div>Built on GitHub Pages</div>
     </footer>
-  </main>
+  </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
