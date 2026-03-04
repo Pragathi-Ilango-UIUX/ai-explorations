@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Photo Wall — AI Exploration</title>
+
+  <style>
+    :root{
+      --bg: #f7f6f4;
+      --paper: #ffffff;
+      --ink: #111111;
+      --muted: #5d5d5d;
+      --rule: #d8d8d8;
+      --cardRule: #e6e6e6;
+      --max: 980px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ margin:0; padding:0; }
+
+    body{
+      background: var(--bg);
+      color: var(--ink);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+                   "Liberation Mono", "Courier New", monospace;
+      line-height: 1.55;
+    }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px 18px 60px;
+    }
+
+    header{
+      display:flex;
+      justify-content:flex-end;
+      padding: 8px 0 18px;
+    }
+    nav a{
+      color: var(--ink);
+      text-decoration:none;
+      font-size: 13px;
+      margin-left: 18px;
+    }
+    nav a:hover{ text-decoration: underline; }
+
+    h1{
+      font-size: 40px;
+      margin: 6px 0 10px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    p{
+      margin: 0 0 12px 0;
+      color: var(--muted);
+      max-width: 75ch;
+      font-size: 14px;
+    }
+
+    .tools{
+      margin-top: 14px;
+      font-size: 12px;
+      color:#777;
+      border-top:1px solid #eee;
+      padding-top:8px;
+      max-width: 75ch;
+    }
+
+    hr{
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 22px 0;
+    }
+
+    .media{
+      background: var(--paper);
+      border: 1px solid var(--cardRule);
+      padding: 14px;
+    }
+
+    .media img{
+      width: 100%;
+      height: auto;
+      display:block;
+      border: 1px solid var(--cardRule);
+      background: #f0f0f0;
+    }
+
+    .video{
+      margin-top: 18px;
+    }
+
+    .video .placeholder{
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 1px solid var(--cardRule);
+      background: linear-gradient(180deg, #fafafa, #f0f0f0);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#8a8a8a;
+      font-size: 12px;
+    }
+
+    .cta{
+      margin-top: 18px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .cta a{
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 1px;
+    }
+    .cta a:hover{
+      opacity: 0.8;
+    }
+
+    footer{
+      margin-top: 30px;
+      padding-top: 14px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 12px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap: 10px;
+    }
+
+    @media (max-width: 720px){
+      header{ justify-content:flex-start; }
+      nav a{ margin-left: 0; margin-right: 16px; }
+      h1{ font-size: 34px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="PASTE_DESIGN_PORTFOLIO_LINK_HERE" target="_blank" rel="noreferrer">Design Portfolio</a>
+        <a href="PASTE_RESUME_LINK_HERE" target="_blank" rel="noreferrer">Resume</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Photo Wall</h1>
+
+      <p>
+        Photo Wall is a small interactive web experiment where users can upload images and arrange them on a dynamic,
+        polaroid-style board. I wanted to explore a playful “drag and rearrange” interaction with instant visual feedback.
+      </p>
+
+      <p>
+        I built this as a lightweight practice project: starting from a simple idea, using AI to move quickly,
+        and keeping the result minimal and fun.
+      </p>
+
+      <div class="tools">
+        Built using: Base44 · ChatGPT
+      </div>
+
+      <hr />
+
+      <section class="media">
+        <!-- Full-size image -->
+        <img src="assets/photo-wall.png" alt="Screenshot of Photo Wall app" />
+
+        <!-- Video (same width, below) -->
+        <div class="video">
+          <!-- Option A: placeholder (replace later) -->
+          <div class="placeholder">Video placeholder (16:9)</div>
+
+          <!-- Option B: if you have a video file, replace the placeholder with:
+          <video controls playsinline style="width:100%; display:block; border:1px solid #e6e6e6; background:#f0f0f0;">
+            <source src="assets/photo-wall-demo.mp4" type="video/mp4" />
+          </video>
+          -->
+        </div>
+
+        <div class="cta">
+          <a href="PASTE_TRY_IT_NOW_LINK_HERE" target="_blank" rel="noreferrer">Try it now →</a>
+        </div>
+      </section>
+
+      <footer>
+        <div>© <span id="year"></span> Pragathi Ilango</div>
+        <div>AI Explorations</div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
