@@ -104,18 +104,16 @@
       display:block;
     }
 
-    .thumb{
-      height: 180px;
+    .thumb-img{
+      width: 100%;
+      height: 180px;      /* match your old .thumb height */
+      object-fit: cover;  /* crops nicely */
+      display: block;
       border: 1px solid var(--cardRule);
-      background: linear-gradient(180deg, #fafafa, #f0f0f0);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color: #8a8a8a;
-      font-size: 12px;
+      background: #f0f0f0;
       margin-bottom: 12px;
     }
-
+    
     .meta h3{
       margin: 0 0 6px;
       font-size: 13px;
@@ -196,7 +194,7 @@
       <div class="grid">
         <!-- Project 1 -->
         <a class="card" href="photo-wall.html" target="_blank" rel="noreferrer">
-          <div class="thumb"><img src="assets/photo_wall.png" alt="Photo Wall screenshot"></div>
+          <img class="thumb-img" src="assets/photo_wall.png" alt="Photo Wall screenshot">
           <div class="meta">
             <h3>Photo Wall</h3>
           
