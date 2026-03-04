@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pragathi — AI Explorations</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="top">
+    <nav class="nav">
+      <a class="brand" href="#">PI.</a>
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#work">Portfolio</a>
+        <a href="#play">Play</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section id="home" class="hero">
+      <div class="hero-left">
+        <h1>Hi, I’m Pragathi.</h1>
+        <p class="sub">
+          I build small AI + interface experiments to practice prompting, interaction design,
+          and rapid prototyping.
+        </p>
+        <p class="meta">
+          Here are a few explorations—each one is a learning artifact, not a “perfect product.”
+        </p>
+      </div>
+
+      <div class="hero-right">
+        <div class="note">
+          <p><strong>Currently exploring:</strong></p>
+          <ul>
+            <li>Figma Make + prompting</li>
+            <li>Accessibility interfaces</li>
+            <li>Playful micro-interactions</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <section id="work" class="section">
+      <h2>AI Explorations</h2>
+
+      <div class="grid">
+        <!-- Card 1 -->
+        <a class="card" href="PASTE_YOUR_LINK_HERE" target="_blank" rel="noreferrer">
+          <img src="assets/asl-braille.png" alt="ASL to Braille prototype screenshot" />
+          <div class="card-body">
+            <h3>ASL → Braille Translator</h3>
+            <p>Accessibility prototype: live hand tracking → Braille + haptic simulation.</p>
+            <span class="tag">Figma Make</span>
+          </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a class="card" href="PASTE_YOUR_LINK_HERE" target="_blank" rel="noreferrer">
+          <img src="assets/experiment-2.png" alt="Project screenshot" />
+          <div class="card-body">
+            <h3>Project Title</h3>
+            <p>One sentence on what you explored + what you learned.</p>
+            <span class="tag">Prompting</span>
+          </div>
+        </a>
+
+        <!-- Duplicate cards as needed -->
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <section id="play" class="section">
+      <h2>Process</h2>
+      <p class="sub">
+        Each exploration includes: a prompt, iterations, what broke, what changed, and what I learned.
+      </p>
+
+      <div class="process">
+        <div class="box">
+          <h3>How I work</h3>
+          <ul>
+            <li>Start with a tiny scope</li>
+            <li>Prototype interactions first</li>
+            <li>Document failures + fixes</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3>What I’m practicing</h3>
+          <ul>
+            <li>Clear prompting</li>
+            <li>State-driven UI</li>
+            <li>Accessibility-first design</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <p>© <span id="year"></span> Pragathi Ilango</p>
+      <p class="small">
+        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+        · <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+        · <a href="mailto:YOUR_EMAIL">Email</a>
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
